@@ -7,4 +7,6 @@ export const database = mysql.createConnection({
     // database: 'memDB'
 });
 
+//add own db
+
 //check if the connection is successful

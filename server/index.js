@@ -1,7 +1,7 @@
 import express from 'express';
 import postRoutes from './routes/posts.js';
 import authRoutes from './routes/auth.js';
-import userRoutes from './routes/users.js';
+
 import cookieParser from 'cookie-parser';
 import multer from 'multer';
 // import mysql from 'mysql2';
@@ -30,7 +30,7 @@ app.post('/server/upload', upload.single('file'), (req, res) => {
 
 app.use('/server/posts', postRoutes);
 app.use('/server/auth', authRoutes);
-app.use('/server/users', userRoutes);
+
 
 app.listen(8800, () => {
     console.log('Server is running on port 8800');
