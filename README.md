@@ -1,3 +1,10 @@
+Full stack blogging application which implements React for the frontend, and Node.js/Express.js to communicated with a MySQL database.
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
