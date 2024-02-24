@@ -1,0 +1,487 @@
+.app {
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 1024px;
+
+        .link {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+    
+}
+
+
+.app .container .authentication {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: lightgray;
+    flex-direction: column;
+}
+
+.app .container .authentication h1 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+
+.app .container .authentication form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #fff;
+    width: 200px;
+}
+
+.app .container .authentication form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.app .container .authentication form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.app .container .authentication form span {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-right: 25px;
+    
+}
+
+.app .container .authentication form p {
+    color: red;
+    font-size: 12px;
+    text-align: center;
+
+}
+
+
+.app  {
+    .container {
+        .navigation {
+            .navContainer {
+                display: flex;
+                padding : 10px 0px;
+                justify-content: space-between;
+                align-items: center;
+                
+
+
+
+
+                .logo {
+                    img {
+                        width: 120px;
+                        height: 120px;
+                    }
+
+                }
+
+                .links {
+
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    h6 {
+                        /* font-size: 10px; */
+                        font-weight: 300;
+                        font-size: 16px;
+                    }
+
+                    span {
+                        cursor: pointer;
+                       
+                    }
+
+                    .write {
+                        display: flex;
+                        align-items: center;
+                        background-color: lightskyblue;
+                        color: black;
+                        padding: 10px;
+                        border-radius: 50%;
+                        width : 50px;
+                        height: 50px;
+                        justify-content: center;
+                        font-weight: 600;
+                        border: 1px white solid;
+
+                        &:hover {
+                            background-color: #fff;
+                            color: black;
+                            border: 1px solid black;
+                        }
+                        
+                    }
+                   
+
+
+                }
+            }
+        }
+    }
+}
+
+.app .container footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgray;
+    margin-top: 100px;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: bold;
+   img {
+       height: 50px;
+    
+   }
+}
+
+.app .container .home {
+        margin-top: 50px; 
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+
+        .post {
+            display : flex;
+            gap: 50px;
+            padding: 20px;
+
+            &:nth-child(odd) {
+                flex-direction: row-reverse;
+                .img {
+                    margin-left: auto;
+                }
+            }
+
+            &:hover {
+                .img::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                }
+            }
+
+
+
+
+        }
+
+        .img {
+            flex: 1;
+            position: relative;
+
+            img {
+                width: 100%;
+                max-height: 500px;
+                object-fit: cover;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+
+        }
+
+        .content {
+            position: relative;
+            flex: 2;
+            z-index: 2; 
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 50px;
+           
+        }
+
+        p {
+            font-size: 15px;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+
+        button {
+            width: max-content;
+            cursor : pointer;
+            background-color: white;
+            border: 1px solid black;
+            color: black;
+
+            transform: perspective(100px) rotateX(0deg);
+            transition: transform 0.3s ease;
+
+            &:hover {
+                background-color: #555;
+                color: #fff;
+                border: 1px solid #555;
+                transform: perspective(100px) rotateX(10deg);
+            }
+        }
+}
+
+.app .container .single {
+
+    display : flex;
+    gap : 50px;
+
+    .content {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            align-items: center;
+            
+        }
+
+        .selfie {
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            font-size: 14px;
+
+            img {   /*profile image */
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                border-radius: 50%;
+            } 
+            .username {
+
+                display: flex;
+                flex-direction: column;
+    
+                span {
+                    font-weight: bold;
+                }
+            }
+
+            .editDelete {
+                display: flex;
+                gap: 5px;
+                cursor: pointer;
+                /* margin-left: auto; */ /*moves the edit and delete to the right */
+               
+
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+
+        h2 {    /*title under the user image */
+            font-size: 40px;
+            
+        }
+
+        p {     /*content under the title */
+            font-size: 15px;
+            line-height: 30px;
+            text-align: justify;
+        }
+
+
+
+
+
+       
+    }
+    .sidebar {
+        flex : 3;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h1 {   /*title of the sidebar */
+            font-size: 20px;
+            font-weight: normal;
+            margin : 0;
+            justify-content: right;
+            text-decoration: underline;
+            font-style: italic;
+            
+
+ 
+        }
+        .post {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            cursor: pointer;
+
+            img {
+                width: 250px;
+                height: 200px;
+                object-fit: cover;
+            }
+
+            button {
+                width: max-content;
+                cursor : pointer;
+                background-color: white;
+                border: 1px solid black;
+                color: black;
+
+                transform: perspective(100px) rotateX(0deg);
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    background-color: #555;
+                    color: #fff;
+                    border: 1px solid #555;
+                    transform: perspective(100px) rotateX(10deg);
+                }
+            }
+
+        }
+
+    }
+
+
+
+}
+
+.app .container .add {
+
+    display: flex;
+    gap: 20px;
+    
+
+    .content{
+        
+        flex: 5;
+        input {
+            width: 97%;
+            padding: 10px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            
+        }
+
+        .editor {
+            /*make the editor smaller*/
+            .wrapper-class {
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 2px;
+            }
+            .toolbar-class {
+                border-bottom: 1px solid black;
+                background-color: #f1f1f1;
+                /* shrink it */
+                padding: 2px;
+            }
+            .editor-class {
+                color: black;
+                height: 250px;
+
+            }
+        
+        }
+        
+    }
+
+    .options {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+        height: 100%;
+
+        h1 {
+            font-size: 20px;
+            margin-bottom: 30px;
+            justify-content: center;
+            text-align: center;
+            text-decoration: underline;
+            
+        }
+        
+        
+        
+        /* gap: 20px; */
+
+        .option1 {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            flex: 2;
+            /* gap: 20px; */
+         
+            
+            input {
+                width: 100%;
+                padding: 10px;
+                
+               
+            }
+
+            button {
+                width: 100%;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                /* justify-content: center; */
+                justify-content: space-between;
+
+            }
+            button:hover {
+                background-color: lightblue;
+            }
+        }
+
+        .option2 {
+
+            margin-top: 20px;
+
+            border: 1px solid black;
+            .catButtons {
+                
+                
+                display: flex;
+                
+                gap: 10px;
+                padding: 10px;
+                
+            }
+        }
+
+    }
+
+
+}
+    
+
+
+
