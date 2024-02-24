@@ -1,4 +1,4 @@
-Full stack blogging application which implements React for the frontend, and Node.js/Express.js to communicated with a MySQL database.
+Full stack blogging application which implements React for the frontend, and Node.js/Express.js for the backend to communicate with a MySQL database.
 
 
 
