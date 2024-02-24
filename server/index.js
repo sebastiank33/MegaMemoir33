@@ -6,7 +6,6 @@ import cookieParser from 'cookie-parser';
 import multer from 'multer';
 // import mysql from 'mysql2';
 
-
 const app = express();
 
 app.use(express.json());
