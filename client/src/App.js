@@ -1,75 +1,32 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Outlet,
-} from "react-router-dom";
-
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Single from "./pages/Single";
 import Write from "./pages/Write";
-
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
-//import the style.css file which is in the client/src folder
 import "./style.css";
 
-
-const Layout = () => {
-  return (
-    <>
-      <Navbar />
-      <Outlet />
-      <Footer />
-    </>
-  );
-}; 
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout/>,
-    children:[ //provide the child pages here
-      {
-        path: "/",
-        element: <Home/>,
-      },
-      {
-        path: "/post/:id",
-        element: <Single/>,
-      },
-      {
-        path: "/write",
-        element: <Write/>,
-      },
-
-    ]
-  },
-
-  {
-    path: "/register",
-    element: <Register/>,
-  },
-
-  {
-    path: "/login",
-    element: <Login/>,
-  },
-
-]);
-
-function App() {
+const App = () => {
   return (
     <div className="app">
-      <div className="container">
-      <RouterProvider router={router}/>
-      </div>
+      <Router>
+        <Navbar />
+        <div className="container">
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/post/:id" component={Single} />
+            <Route path="/write" component={Write} />
+            <Route path="/register" component={Register} />
+            <Route path="/login" component={Login} />
+          </Switch>
+        </div>
+        <Footer />
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
-
-
